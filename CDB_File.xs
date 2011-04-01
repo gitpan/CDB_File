@@ -36,7 +36,6 @@ extern "C" {
 #include "EXTERN.h"
 #include "perl.h"
 #include "XSUB.h"
-#include "ppport.h"
 
 #include <sys/stat.h>
 #include <sys/types.h>
@@ -476,8 +475,9 @@ cdb_FETCH(this, k)
 	}
 	ST(0) = sv_newmortal();
 	if (found) {
+		U32 dlen;
 		SvUPGRADE(ST(0), SVt_PV);
-		U32 dlen = cdb_datalen(this);
+		dlen = cdb_datalen(this);
 
 		(void)SvPOK_only(ST(0));
 		SvGROW(ST(0), dlen + 1); SvCUR_set(ST(0),  dlen);
