@@ -1,5 +1,8 @@
 Revision history for Perl extension CDB_File.
 
+0.96_03 - Todd Rinald <toddr@cpan.org> 2011-04-03
+    - Test build to try to test suggested fix in RT #2341
+
 0.96_02 - Todd Rinald <toddr@cpan.org> 2011-04-03
     - Perl 5.6 doesn't warn about $x{undef}. Skip this test for 5.6
 
