@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               CDB_File
-version:            0.97
+version:            0.97_01
 abstract:           Perl extension for access to cdb databases 
 author:
     - Todd E Rinaldo <toddr@cpan.org>
