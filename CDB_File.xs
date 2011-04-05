@@ -45,8 +45,7 @@ extern "C" {
 #include <unistd.h>
 
 #ifdef WIN32
-#define Perl_report_uninit
-#define fsync
+#define fsync _commit
 #endif
 
 #ifdef HASMMAP
